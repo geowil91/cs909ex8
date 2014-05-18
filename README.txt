@@ -16,4 +16,6 @@ The directory containing the XML version of the Reuters corpus (named 'reuters21
 
 This script should simply be run from the shell, with the command 'python exercise8.py' from within the directory.
 
+The Ward clustering algorithm has been commented out as it takes over 90 minutes to execute, but output should be identical to that in the Appendix below.
+
 Student number: 1005506
