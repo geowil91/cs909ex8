@@ -375,20 +375,23 @@ for i in xrange(3):
         print("Adjusted Rand-Index: %.3f" % metrics.adjusted_rand_score(labels, km.labels_))
 
     else:
+        """
+        # You really don't want to run this, it takes forever.
         print("Ward")
-        km = Ward()
+        km = Ward(n_clusters=120)
         print("Clustering sparse data with %s" % km)
         t0 = time()
         km.fit(X_all.toarray())
 
-        print("done in %0.3fs" % (time() - t0))
+        #print("done in %0.3fs" % (time() - t0))
         print()
 
         print("Homogeneity: %0.3f" % metrics.homogeneity_score(labels, km.labels_))
         print("Completeness: %0.3f" % metrics.completeness_score(labels, km.labels_))
         print("V-measure: %0.3f" % metrics.v_measure_score(labels, km.labels_))
         print("Adjusted Rand-Index: %.3f" % metrics.adjusted_rand_score(labels, km.labels_))
-       
+        """
+        
 print()
 
 print('================================ FINISHED ================================')
